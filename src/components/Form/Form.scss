@@ -1,0 +1,19 @@
+@import '../../styles/main.scss';
+
+.container {
+    @include container;
+    background-color: var(--color-light-2);
+
+
+    form {
+        width: 80%;
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-l);
+        padding: var(--spacing-l);
+
+        h2 {
+            @include heading2;
+            color: var(--color-dark-1);
+        }
+    }
+}

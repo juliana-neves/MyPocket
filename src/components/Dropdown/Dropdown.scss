@@ -1,0 +1,75 @@
+@import '../../styles/main.scss';
+
+
+.form-items {
+    margin-bottom: var(--spacing-m);
+
+
+    .dropdown {
+        @include sharedFormItem;
+        cursor: pointer;
+        display: block;
+
+        // .react-select-container {
+        //     background-color: red;
+
+        //     .react-select__control {
+        //         background-color: red;
+        //         border-color: #cccccc;
+        //         padding: var(--spacing-s);
+        //     }
+
+        //     .react-select__option {
+        //         background-color: #f2f2f2;
+        //         color: var(--color-dark-3);
+        //         padding: var(--spacing-s);
+
+        //         &.react-select__option--is-selected {
+        //             background-color: red;
+        //             color: #ffffff;
+        //         }
+        //     }
+        // }
+    }
+
+    // .form-items {
+    //     margin-bottom: var(--spacing-m);
+
+    //     Select {
+    //         @include sharedFormItem;
+    //         cursor: pointer;
+    //         display: block;
+
+    //         option {
+    //             height: var(--height-m);
+    //             color: var(--color-dark-1);
+    //             padding: 50px;
+    //             margin: 50px;
+    //         }
+
+
+    //     .react-select__control {
+    //         // Estilos para o controle do dropdown
+    //         background-color: #f2f2f2;
+    //         border-color: #cccccc;
+    //         padding: 5px;
+    //       }
+
+    //       .react-select__option {
+    //         // Estilos para as opções do dropdown
+    //         background-color: #f2f2f2;
+    //         color: #333333;
+    //         padding: 5px;
+
+    //         &.react-select__option--is-selected {
+    //           background-color: #4B45BF;
+    //           color: #ffffff;
+    //         }
+    //       }
+    //     }
+
+    .label {
+        @include label;
+        display: block;
+    }
+}

@@ -1,0 +1,55 @@
+:root {
+    font-family: 'Inter', sans-serif;
+
+    // Colors
+    --color-primary: #635BFF;
+    --color-primary-dark: #4B45BF;
+    --color-secondary: #00AF91;
+    --color-secondary-dark: #007965;
+    --color-dark-1: #0A2540;
+    --color-dark-2: #6A768A;
+    --color-dark-3: #8C9EB1;
+    --color-light-1: #F6F9FC;
+    --color-light-2: #E3ECF5;
+    --color-light-3: #CBD6E0;
+    --color-white: #FFFFFF;
+    
+    // Fonts
+    --h1-size: 40px;
+    --h1-weight: 800;
+    --h2-size: 30px;
+    --h2-weight: 800;
+    --h3-size: 26px;
+    --h3-weight: 700;
+    --label-size: 14px;
+    --label-weight: 600;
+    --button-size: 16px;
+    --button-weight: 500;
+    --text-body-s: 12px;
+    --text-body-m: 16px;
+    --text-body-l: 18px;
+    --link-size: var(--text-body-m);
+    --link-color: var(--primary);
+    --link-color-hover: var(--primary-dark);
+    --link-weight: 600;
+
+    // Spacing
+    --spacing-xxs: 8px;
+    --spacing-xs: 16px;
+    --spacing-s: 24px;
+    --spacing-m: 32px;
+    --spacing-l: 40px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 56px;
+
+    //Border
+    --border-radius-s: 4px;
+    --border-radius-m: 8px;
+    --border-radius-l: 16px;
+
+    //Height
+    --height-s: 32px;
+    --height-m: 40px;
+    --height-l: 48px;
+
+}

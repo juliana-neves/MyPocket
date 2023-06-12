@@ -1,0 +1,15 @@
+@import '../../styles/main.scss';
+
+.form-items {
+    margin-bottom: var(--spacing-m);
+
+    .input {
+        @include sharedFormItem;
+        display: block;
+    }
+
+    .label {
+        @include label;
+        display: block;
+    }
+}

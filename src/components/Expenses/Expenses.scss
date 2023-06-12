@@ -1,0 +1,21 @@
+@import '../../styles/main.scss';
+
+.section {
+    @include container;
+
+    .category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        span {
+            margin-right: var(--spacing-xs);
+            font-size: var(--h3-size)
+        }
+        h3 {
+            @include heading3;
+            margin-bottom: 0;
+            color: var(--color-dark-1);
+        }
+    }
+}
