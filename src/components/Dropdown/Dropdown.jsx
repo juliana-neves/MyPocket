@@ -12,8 +12,9 @@ const Dropdown = (props) => {
                 className='dropdown'
                 onChange={handleOnChange}
                 required={props.required}
-                items={props.value}
+                value={props.value}
             >
+                <option value="">Select</option>
                 {props.items && props.items.map(item => (
                     <option key={item}>{item}</option>
                 ))}

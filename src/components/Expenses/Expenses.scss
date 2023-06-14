@@ -1,21 +1,33 @@
 @import '../../styles/main.scss';
 
-.section {
-    @include container;
+.card {
+    margin: var(--spacing-xs);
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 10rem;
 
-    .category {
+    .header {
+        border-radius: 8px 8px 0 0;
+        padding: var(--spacing-s);
+        height: var(--height-xxs);
+        box-sizing: border-box;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        span {
-            margin-right: var(--spacing-xs);
-            font-size: var(--h3-size)
+        
+        h4 {
+            @include heading4;
+            text-align: center;
         }
-        h3 {
-            @include heading3;
-            margin-bottom: 0;
-            color: var(--color-dark-1);
-        }
+    }
+
+    .body {
+        display: flex;
+        align-items: center;
+        border-radius: 0 0 8px 8px;
+        height: var(--height-m);
+        padding: var(--spacing-l);
+        background-color: var(--color-white);
+        box-sizing: border-box;
     }
 }

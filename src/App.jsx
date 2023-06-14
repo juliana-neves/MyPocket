@@ -1,6 +1,7 @@
 import Form from "./components/Form/Form";
-import Expenses from './components/Expenses/Expenses';
+import Categories from './components/Categories/Categories';
 import { useState } from "react";
+import {v4 as uuid} from 'uuid';
 
 
 function App() {
@@ -9,78 +10,89 @@ function App() {
     {
       name: 'Entertainment',
       icon: '🎉',
-      backgroung: '#ACC1DE',
+      background: '#F4E6EF',
+      colorcard: '#EB57B0',
     },
     {
       name: 'Groceries',
       icon: '🍎',
-      backgroung: '#B6D9C5',
+      background: '#F3D5D5',
+      colorcard: '#EB5757',
     },
     {
       name: 'Health',
       icon: '💊',
-      backgroung: '#BAD2F3',
+      background: '#F5F1E5',
+      colorcard: '#F2C94C',
     },
     {
       name: 'Insurance',
       icon: '🔑',
-      backgroung: '#BDEBEB',
+      background: '#F4E3D3',
+      colorcard: '#F2994A',
     },
     {
       name: 'Restaurants',
       icon: '🍽️',
-      backgroung: '#CDEAD9',
+      background: '#DAEDE2',
+      colorcard: '#6FCF97',
     },
     {
       name: 'Rent',
       icon: '🏡',
-      backgroung: '#D2D1F8',
+      background: '#CFEEEE',
+      colorcard: '#38D3D3',
     },
     {
       name: 'Services',
       icon: '🛎️',
-      backgroung: '#DAC4EF',
+      background: '#CDDEF3',
+      colorcard: '#2F80ED',
     },
     {
       name: 'Shopping',
       icon: '🛍️',
-      backgroung: '#F2C6C6',
+      background: '#E3D4F1',
+      colorcard: '#9B51E0',
     },
     {
       name: 'Transport',
       icon: '🚌',
-      backgroung: '#F2C6E1',
+      background: '#DEDCF7',
+      colorcard: '#807AFD',
     },
     {
       name: 'Travel',
       icon: '✈️',
-      backgroung: '#F5DAC2',
-    },
-    {
-      name: 'Utilities',
-      icon: '⚙️',
-      backgroung: '#F5E8C3',
+      background: '#EFD0F7',
+      colorcard: '#D83EFF',
     },
   ]
 
   const [expenses, setExpenses] = useState([]);
   const addExpense = (expense) => {
-    console.log(expense);
     setExpenses([...expenses, expense])
   }
 
   return (
     <div>
-      <Form categories={categories.map(category => category.name)} expenseRegistered={expense => addExpense(expense)} />
-
-
-      {categories.map(category => <Expenses
-        key={category.name}
-        name={category.name}
-        icon={category.icon}
-        backgroung={category.backgroung}
-      />)}
-
+      <Form
+        categories={categories.map(category =>
+          category.name)}
+        expenseRegistered={expense =>
+          addExpense(expense)}
+        colorcard={categories.map(category =>
+          category.colorcard)}
+      />
+      {categories.map(category => (
+        <Categories
+          key={uuid()}
+          name={category.name}
+          icon={category.icon}
+          background={category.background}
+          colorcard={category.colorcard}
+          expenses={expenses.filter((expense) => expense.category === category.name)}
+        />))}
     </div>
   )
 }

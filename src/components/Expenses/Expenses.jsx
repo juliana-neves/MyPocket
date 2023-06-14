@@ -1,13 +1,19 @@
 import './Expenses.scss';
 
-const Expenses = (props) => {
-    const bgColor = { backgroundColor: props.backgroung };
-
+const Expenses = ({ valueSpent, description, colorcard }) => {
+    const bgHeader = { backgroundColor: colorcard };
+    
     return (
-        <section className='section' style={bgColor}>
-            <div className='category'>
-                <span>{props.icon}</span>
-                <h3>{props.name}</h3>
+        <section>
+            <div className='card' style={bgHeader}>
+                <div className='header'>
+                    <h4>
+                        R$ {valueSpent}
+                    </h4>
+                </div>
+                <div className='body'>
+                    {description}
+                </div>
             </div>
         </section>
     );

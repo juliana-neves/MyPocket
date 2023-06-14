@@ -5,33 +5,25 @@ import Dropdown from '../Dropdown/Dropdown';
 import './Form.scss';
 
 const Form = (props) => {
-
-    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
     const [valueSpent, setValueSpent] = useState('');
-
     const handleOnSubmit = (event) => {
         event.preventDefault();
         props.expenseRegistered({
-            name,
+            description,
             category,
             valueSpent,
         })
-    }
-
+        setCategory('');
+        setValueSpent('');
+        setDescription('');
+    };
 
     return (
         <section className='container'>
             <form onSubmit={handleOnSubmit}>
                 <h2>Register your spent</h2>
-                <Input
-                    type="text"
-                    label="Name"
-                    placeholder="Name"
-                    required={true}
-                    value={name}
-                    changeValue={value => setName(value)}
-                />
                 <Dropdown
                     items={props.categories}
                     label="Category"
@@ -46,6 +38,14 @@ const Form = (props) => {
                     required={true}
                     value={valueSpent}
                     changeValue={value => setValueSpent(value)}
+                />
+                <Input
+                    type="text"
+                    label="Description"
+                    placeholder="Description"
+                    required={true}
+                    value={description}
+                    changeValue={value => setDescription(value)}
                 />
                 <Button type="submit" children="Submit" />
             </form>
